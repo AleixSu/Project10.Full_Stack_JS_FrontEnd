@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Syncopate:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--font-display);
+}
+:root {
+  /* ======= COLORS (Light Mode) ======= */
+  --color-bg: #f8f6f2; /* blanco cálido, no puro */
+  --color-surface: #ffffff;
+  --color-text: #222222;
+  --color-text-muted: #666666;
+  --color-button-pressed: #1a1a1a8a;
+  --color-nav: #1a1a1ad2;
+  --color-separator: #c9c9c96b;
+  --color-profileMenu: #dad8d84f;
+
+  /* colores vivos principales*/
+  --color-primary: #ff8a2b;
+  --color-secondary: #b596ff;
+  --color-keyWord-primary: #6809cf;
+  --color-keyWord-secondary: #ff2104;
+  --color-keyWord-terciary: #cfb106;
+
+  /* ======= COLORS (Dark Mode) ======= */
+  --color-bg-dark: #1a1a1a;
+  --color-surface-dark: #242424;
+  --color-text-dark: #f0f0f0;
+  --color-text-muted-dark: #a0a0a0;
+
+  --color-primary-dark: #ff7597;
+  --color-secondary-dark: #00d6b3;
+  --color-accent-dark: #ffdb7d;
+  --color-link-dark: #4da3ff;
+  --color-border-dark: #333333;
+  --color-lightborder-dark: #afafaf;
+
+  /* ======= SPACING ======= */
+  --gap-xs: 0.25rem;
+  --gap-sm: 0.5rem;
+  --gap-md: 1rem;
+  --gap-lg: 2rem;
+  --gap-xl: 4rem;
+
+  /* ======= WIDTHENING ======= */
+  --width-standard: 80%;
+  --width-cards: 30%;
+
+  /* ======= TYPOGRAPHY ======= */
+  --font-main: 'Inter', 'Roboto', sans-serif;
+  --font-display: 'Poppins', 'Montserrat', sans-serif;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 1.1rem;
+  --font-size-md: 1.8rem;
+  --font-size-lg: 2.5rem;
+  --font-size-xl: 3.2rem;
+
+  /* ======= SHADOWS ======= */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 4px 3px 2px #4e4e4e;
+  --shadow-xl: 6px 5px 4px #2b2b2b;
+
+  /* ======= BORDER RADIUS ======= */
+  --radius-xs: 2px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 25px;
+  --radius-max: 50px;
+
+  /* ======= TRANSITIONS ======= */
+  --transition-superfast: all 0.1s ease-in-out;
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-normal: all 0.35s ease-in-out;
+  --transition-slow: all 0.6s ease-in-out;
+
+  /* ======= Z-INDEX ======= */
+  --z-header: 100;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+}
+
+/* modo oscuro activable con clase .dark */
+.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-muted: var(--color-text-muted-dark);
+  --color-primary: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-link: var(--color-link-dark);
+  --color-border: var(--color-border-dark);
+}
+
+body {
+  background-color: var(--color-bg);
+  min-height: 100svh;
+}

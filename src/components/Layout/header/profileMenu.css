@@ -1,0 +1,80 @@
+#profileMenuDiv {
+  position: fixed;
+  width: 19.5vw;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--color-nav);
+  top: 10vh;
+  right: 0.5vw;
+  z-index: 4;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.hidden {
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateY(-20px);
+}
+
+#profileMenuDiv ul {
+  display: block;
+  justify-content: start;
+  text-align: justify;
+}
+#profileMenuDiv ul a {
+  padding: 0;
+  justify-content: start;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+#logOutOption {
+  margin-bottom: 10px;
+  text-align: end;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-top: 1px solid var(--color-separator);
+  color: var(--color-separator);
+  transition: var(--transition-fast);
+  cursor: pointer;
+  font-size: var(--text-size-md);
+}
+
+#logOutOption:hover {
+  color: var(--color-button-pressed);
+}
+
+@media (max-width: 500px) {
+  #profileMenuDiv {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    margin-top: 0px;
+    top: 40vh;
+    border-radius: 0px;
+    transition: var(--transition-fast);
+  }
+  #profileMenuUl {
+    display: block;
+    justify-content: center;
+    text-align: justify;
+  }
+  #profileMenuUl li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #profileMenuUl a {
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  #logOutOption {
+    width: 100%;
+    text-align: center;
+  }
+}

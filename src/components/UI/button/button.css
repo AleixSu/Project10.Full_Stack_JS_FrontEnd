@@ -1,0 +1,72 @@
+.mainButton {
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-max);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.startButton {
+  margin-top: 30px;
+  background-color: var(--color-nav);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: var(--transition-superfast);
+}
+
+.startButton:hover {
+  opacity: 1;
+}
+
+.registerButton {
+  width: 25%;
+  margin-top: 30px;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  font-size: clamp(0.5rem, 2vw, var(--font-size-sm));
+  position: relative;
+  z-index: 0;
+  transition: var(--transition-normal);
+}
+
+.registerButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to right,
+    var(--color-secondary) 20%,
+    var(--color-primary) 100%
+  );
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.4;
+}
+
+.registerButton:hover {
+  background: var(--color-button-pressed);
+  transition: var(--transition-normal);
+}
+
+.filterLocationButton {
+  font-size: clamp(0.5rem, 1vw, var(--font-size-xs));
+  margin: 10px 0;
+  transition: var(--transition-normal);
+}
+
+.filterLocationButton.active {
+  background-color: var(--color-button-pressed);
+}
+
+@media (max-width: 470px) {
+  .registerButton {
+    width: 80%;
+    margin-top: 30px;
+    background-color: var(--color-surface);
+    font-size: clamp(0.5rem, 2vw, var(--font-size-sm));
+    position: relative;
+    z-index: 0;
+    transition: var(--transition-normal);
+  }
+}

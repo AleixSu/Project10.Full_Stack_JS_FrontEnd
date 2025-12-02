@@ -1,0 +1,173 @@
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+#home .video-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  min-width: 1920px;
+  height: 56.25vw;
+  min-height: 1080px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+
+#home .video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+#logoDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  height: 40%;
+  top: 20svh;
+  padding: 20px 10px;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+#logoDiv h4 {
+  text-align: center;
+  font-size: clamp(1.5rem, 6vw, var(--font-size-xl));
+}
+
+.keyWord {
+  background: var(--color-keyWord-primary);
+  background: linear-gradient(
+    to right,
+    var(--color-keyWord-primary) 20%,
+    var(--color-keyWord-secondary) 49%,
+    var(--color-keyWord-terciary) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#logoImg {
+  width: 15%;
+  margin-bottom: 30px;
+}
+
+#startButton {
+  color: var(--color-bg);
+}
+
+#articleIntro {
+  position: relative;
+  height: 180svh;
+  width: var(--width-standard);
+  top: 50svh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 15px;
+  background-color: var(--color-bg);
+  z-index: 1;
+}
+
+#articleIntro > h3 {
+  font-size: clamp(0.8rem, 4vw, var(--font-size-lg));
+  margin: 0px 20%;
+  text-align: center;
+}
+
+#cardDiv {
+  width: var(--width-standard);
+  margin: 1 0;
+  display: flex;
+  gap: var(--gap-md);
+  justify-content: space-around;
+}
+
+#articleIntro > div > p {
+  font-size: clamp(0.5rem, 2vw, var(--font-size-sm));
+  text-align: justify;
+  color: var(--color-text-muted);
+}
+
+#eventiaText {
+  padding: 0px 11%;
+}
+
+#joinUs {
+  width: var(--width-standard);
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#joinUs h5 {
+  font-size: clamp(0.8rem, 4vw, var(--font-size-lg));
+  text-align: center;
+}
+
+#memberDiv {
+  width: var(--width-standard);
+  display: flex;
+  justify-content: space-around;
+}
+
+#benefitsDiv h6 {
+  font-size: clamp(0.8rem, 3vw, var(--font-size-md));
+  margin-bottom: 15px;
+}
+
+#benefitsDiv li {
+  margin-top: 2%;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 50px;
+  color: var(--color-text-muted);
+  font-size: clamp(0.5rem, 2vw, var(--font-size-sm));
+}
+
+#memberDiv img {
+  width: 30%;
+  object-fit: contain;
+}
+
+@media (max-width: 470px) {
+  #cardDiv {
+    width: var(--width-standard);
+    margin: 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-md);
+    justify-content: space-around;
+  }
+
+  #memberDiv {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #memberDiv img {
+    width: 80%;
+    object-fit: contain;
+  }
+}

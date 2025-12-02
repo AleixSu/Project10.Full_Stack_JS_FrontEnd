@@ -1,0 +1,140 @@
+header {
+  height: 10svh;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-nav);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+header img {
+  padding: 10px;
+}
+
+#burgerMenu {
+  pointer-events: none;
+  display: none;
+}
+#headerUl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+#headerUl li {
+  height: 100%;
+}
+
+header a {
+  height: 100%;
+  display: flex;
+  padding: 0 10px 0 10px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-separator);
+  transition: var(--transition-fast);
+}
+
+header a:hover {
+  color: var(--color-surface);
+}
+nav {
+  display: flex;
+}
+
+.profile {
+  background-color: var(--color-profileMenu);
+  width: 20vw;
+}
+.profile a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile a div {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-max);
+  overflow: hidden;
+}
+
+.profile a img {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 780px) {
+  header {
+    justify-content: space-around;
+  }
+
+  header a {
+    font-size: 10px;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    justify-content: space-between;
+  }
+  #headerUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    top: 0vh;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: var(--color-button-pressed);
+    padding: 5vh 0;
+    transition: var(--transition-normal);
+    z-index: -10;
+    pointer-events: none;
+  }
+
+  #headerUl.active {
+    top: 10vh;
+    opacity: 1;
+    pointer-events: all;
+  }
+  #headerUl li {
+    height: 100%;
+    width: 100%;
+  }
+
+  header a {
+    font-size: 17px;
+
+    color: var(--color-bg);
+    transition: var(--transition-fast);
+  }
+  header a:hover {
+    color: rgba(255, 255, 255, 0.363);
+  }
+  #burgerMenu {
+    position: absolute;
+    top: 2.5vh;
+    right: 2vh;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    pointer-events: all;
+    cursor: pointer;
+  }
+  #burgerMenu img {
+    width: 100%;
+  }
+  .profile {
+    background-color: transparent;
+    width: 100%;
+  }
+}

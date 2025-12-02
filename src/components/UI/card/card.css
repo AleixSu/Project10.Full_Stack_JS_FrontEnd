@@ -1,0 +1,242 @@
+.card {
+  width: var(--width-cards);
+  height: 100%;
+  border-radius: var(--radius-lg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: var(--transition-fast);
+  text-shadow: var(--shadow-lg);
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+.card > h3 {
+  padding: 40% 35%;
+  color: var(--color-surface);
+  filter: blur(10px);
+  transition: var(--transition-normal);
+  text-shadow: var(--shadow-lg);
+  cursor: pointer;
+  font-size: clamp(0.8rem, 3vw, var(--font-size-sm));
+}
+
+.card > h3:hover {
+  filter: blur(0px);
+}
+
+.cityCard {
+  width: 30%;
+  height: 250px;
+  margin: 1%;
+  border-radius: var(--radius-md);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: var(--transition-fast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cityCard:hover {
+  scale: 1.05;
+}
+.cityCard h3 {
+  color: white;
+  font-size: clamp(1rem, 2vw, var(--font-size-md));
+  text-shadow: var(--shadow-lg);
+}
+.eventCard {
+  position: relative;
+  width: 30%;
+  height: 250px;
+  margin: 1%;
+  border-radius: var(--radius-md);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: var(--transition-fast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.eventCard:hover {
+  scale: 1.05;
+}
+.eventCard div {
+  z-index: 3;
+  opacity: 0;
+  transition: var(--transition-fast);
+  color: white;
+  text-align: center;
+  text-shadow: var(--shadow-lg);
+}
+.eventCard h3 {
+  color: white;
+  font-size: clamp(1rem, 2vw, var(--font-size-md));
+  text-shadow: var(--shadow-lg);
+}
+.eventCard h4 {
+  font-size: clamp(0.7rem, 2vw, var(--font-size-sm));
+}
+
+#overlayBlurCard {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.eventCard:hover #overlayBlurCard {
+  opacity: 2;
+}
+.eventCard:hover div {
+  opacity: 1;
+}
+
+.eventByLocationCard {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  background-size: 100%;
+  background-position: 143px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+}
+.eventByLocationCard:hover {
+  transform: scale(1.02);
+}
+
+#imgDiv {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+#imgDiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#infoCard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#infoCard h3 {
+  font-size: clamp(0.7rem, 2vw, var(--font-size-md));
+  text-shadow: var(--shadow-lg);
+}
+#infoCard h5 {
+  color: var(--color-surface-dark);
+  text-shadow: var(--shadow-lg);
+  font-size: clamp(0.5rem, 2vw, var(--font-size-sm));
+}
+
+.attendeeCard {
+  width: 90%;
+  border-radius: var(--radius-max);
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.attendeeCard::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: var(--bg-image) center/cover no-repeat;
+  filter: blur(10px);
+  transform: scale(5);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+#profileImgDivCard {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: var(--radius-max);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+#profileImgDivCard img {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#infoProfileCard {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+#infoProfileCard h3 {
+  margin-left: 15px;
+  font-size: clamp(0.8rem, 2vw, var(--font-size-sm));
+}
+
+#infoProfileCard p {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+@media (max-width: 470px) {
+  .card {
+    width: 90%;
+    border-radius: var(--radius-lg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: var(--transition-fast);
+    text-shadow: var(--shadow-lg);
+  }
+  .eventCard {
+    width: 80%;
+    height: 150px;
+  }
+  .cityCard {
+    width: 85%;
+    height: 150px;
+  }
+  .eventByLocationCard {
+    width: 100%;
+    height: 100px;
+  }
+  #imgDiv {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+
+  #infoCard {
+    width: 30%;
+  }
+}
