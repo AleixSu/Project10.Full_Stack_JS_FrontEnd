@@ -12,7 +12,8 @@ export const API = async ({
   }
   isJSON ? (headers['Content-Type'] = 'application/json') : null
 
-  const res = await fetch(url + endpoint, {
+  const res = await fetch(API_URL + endpoint, {
+    // ✅ Cambiar 'url' por 'API_URL'
     body: isJSON ? JSON.stringify(body) : body,
     method,
     headers
