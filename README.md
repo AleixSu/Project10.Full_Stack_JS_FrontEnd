@@ -8,8 +8,10 @@ Interfaz moderna y responsive que consume la API REST de EventHub, permitiendo r
 
 ## Aplicación desplegada
 
-Frontend (Vercel): https://project10-full-stack-js-front-end-git-main-aleixsus-projects.vercel.app
+Frontend (Vercel): https://project10-full-stack-js-front-end.vercel.app/
+
 Repositorio BackEnd: https://github.com/AleixSu/Project10.Full_Stack_JS_BackEnd
+
 Backend desplegado (Render): https://project10-full-stack-js-backend.onrender.com
 
 ## Instalación y uso
